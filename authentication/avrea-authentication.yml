@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.avrea.com/cli ; https://avrea.com/trust-security
+docs: https://docs.avrea.com/cli
+note: >-
+  Avrea publishes no public REST API OpenAPI, so this profile is derived from
+  the documented CLI and console authentication rather than from securitySchemes.
+summary:
+  types: [apiKey, browser-oauth]
+  api_key_in: [header, environment]
+  oauth2_flows: [browser-login]
+schemes:
+- name: AVR_TOKEN
+  type: apiKey
+  in: environment
+  parameter: AVR_TOKEN
+  description: >-
+    API key used for non-interactive / CI authentication with the avr CLI.
+    Presented via the AVR_TOKEN environment variable; `avr auth logout` revokes
+    the active API key.
+  sources: [https://docs.avrea.com/cli]
+- name: browser-login
+  type: oauth2-like
+  flow: browser
+  description: >-
+    Interactive browser-based login (`avr auth login`) that authenticates the
+    CLI against the Avrea console session at console.avrea.com.
+  sources: [https://docs.avrea.com/cli]
+account_security:
+- Multi-factor authentication (MFA)
+- Single sign-on (SSO)
+- Role-based access control for runners, logs, and build data
