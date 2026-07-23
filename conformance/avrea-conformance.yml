@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://avrea.com/trust-security ; https://trust.avrea.com
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: >-
+    "Avrea undergoes annual SOC 2 Type II audits covering security,
+    availability, and confidentiality." (avrea.com/trust-security). SOC 2
+    Type II compliance achievement noted in the changelog on 2026-06-03.
+- id: iso-27001
+  conforms: true
+  evidence: Certified information security management system (avrea.com/trust-security).
+- id: gdpr
+  conforms: true
+  evidence: >-
+    GDPR compliance through data protection, access controls, logging, and
+    retention practices (avrea.com/trust-security).
+- id: oauth2
+  conforms: false
+  evidence: No public OAuth2 API surface documented; CLI uses API keys + browser login.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public REST API / OpenAPI published to assert error format.

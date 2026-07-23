@@ -1,0 +1,68 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.avrea.com/cli
+name: avr
+description: >-
+  First-party Avrea command-line client for managing and monitoring CI/CD runs,
+  jobs, workflows, caches, and organizations on Avrea's managed GitHub Actions
+  runners.
+binary: avr
+package: pypi:avr-cli
+repository: https://github.com/avrea-com/cli
+install:
+- method: homebrew
+  command: brew install avrea-com/tap/avr
+- method: pypi
+  command: pip install avr-cli
+  requires: Python 3.14+
+authentication:
+  browser_login: avr auth login
+  status: avr auth status
+  logout: avr auth logout
+  non_interactive:
+    env: AVR_TOKEN
+    note: Set AVR_TOKEN for non-interactive/CI environments instead of interactive login.
+  exit_codes:
+    "4": auth required (for script detection)
+features:
+- Auto-detection of repository from git remotes
+- JSON output for scripting via --json flag
+- SSH access to running VMs (avr job ssh <job-id>)
+- Live monitoring (avr run watch, avr job metrics)
+- Tab completion for bash, zsh, and fish
+- OSC 8 terminal hyperlink support
+command_groups:
+- group: core
+  commands:
+  - name: status
+    summary: Organization-wide health overview
+  - name: run
+    summary: Manage and monitor runs
+  - name: job
+    summary: Job-level operations (includes ssh, metrics)
+  - name: workflow
+    summary: Workflow management
+  - name: cache
+    summary: Cache operations
+  - name: log
+    summary: Log retrieval
+- group: setup-config
+  commands:
+  - name: auth
+    summary: Authentication management (login, status, logout)
+  - name: config
+    summary: Configuration settings
+  - name: settings
+    summary: System settings
+  - name: billing
+    summary: Billing information
+  - name: audit-events
+    summary: Audit logging
+- group: additional
+  commands:
+  - name: repo
+    summary: Repository operations
+  - name: org
+    summary: Organization management
+  - name: health
+    summary: System health checks

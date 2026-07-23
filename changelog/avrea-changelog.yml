@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.avrea.com/changelog
+scheme: dated
+versioned: false
+current: rolling
+entries:
+- date: '2026-06-18'
+  highlight: Nx remote cache integration for monorepo CI builds, no external setup required.
+  breaking: false
+- date: '2026-06-17'
+  highlight: Docker layer caching colocated with runners via BuildKit, reducing rebuild times.
+  breaking: false
+- date: '2026-06-15'
+  highlight: Pre-warmed cache index eliminates cold-start delays on first daily builds.
+  breaking: false
+- date: '2026-06-15'
+  highlight: Email-based teammate invitations with simplified onboarding once the GitHub App is installed.
+  breaking: false
+- date: '2026-06-15'
+  highlight: Webhook resilience improvements — automatic job reconciliation and retry logic.
+  breaking: false
+- date: '2026-06-09'
+  highlight: Apple M5 Max runners added to the fleet for macOS and Linux ARM workloads.
+  breaking: false
+- date: '2026-06-03'
+  highlight: Expanded cache support for .NET, Gradle, and Windows Go builds; SOC 2 Type II compliance achieved.
+  breaking: false
+- date: '2026-06-03'
+  highlight: Console notification center, improved log viewer with live metric correlation, and chart UI refinements.
+  breaking: false

@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of avrea.com / docs.avrea.com / console.avrea.com
+note: >-
+  No genuine .well-known discovery documents were found. The console host
+  returns its SPA index.html (HTTP 200, text/html) for any /.well-known/ path,
+  so the openid-configuration and oauth-authorization-server "200"s are the
+  single-page-app fallback, not valid discovery documents. None were saved.
+hosts:
+- host: https://avrea.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://docs.avrea.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://console.avrea.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    content_type: text/html
+    reason: SPA index.html fallback, not a valid OIDC discovery document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    valid: false
+    content_type: text/html
+    reason: SPA index.html fallback, not a valid RFC 8414 document
