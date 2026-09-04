@@ -22,15 +22,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://cdn.prod.website-files.com/69a56a230e454c0d5521fb42/6a06fe2a6b17351ed77a83f6_8f394a43deca8d5b2b86e31d993164bd_Avrea_OpenGraph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/avrea/refs/heads/main/apis.yml
